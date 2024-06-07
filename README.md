@@ -15,7 +15,7 @@ The Bank Marketing Dataset is derived from direct marketing campaigns (via phone
 * **bank-full.csv**: An older version of the full dataset with all examples and 17 features, ordered by date.
 * **bank.csv**: A 10% sample of the third dataset (4,521 examples), randomly selected, with 17 features.
 
-We decided on using the **bank-full.csv**, as it contained the full dataset with less unnecessary features, saving us from having to drop those later on.
+We decided on using the **bank-full.csv**, as it contained the full dataset with fewer unnecessary features, saving us from having to drop those later on.
 
 ## Classification Goal:
 The main use of this dataset is to predict whether a client will agree to subscribe to a [term deposit](https://www.investopedia.com/terms/t/termdeposit.asp) after being contacted through the bank's marketing campaign.
@@ -23,7 +23,7 @@ The main use of this dataset is to predict whether a client will agree to subscr
 Our goal is to use the data collected from these phone calls such as; the client's age, job, marital status, and previous interactions with the bank — to build a model that can determine if the client will say 'yes' or 'no' to opening a term deposit.
 
 # Creating the Model:
-In our project to predict whether a client will subscribe to a term deposit, we explored several machine learning approaches to find the most effective model. Below, we outline the different models we tried and the techniques we used to enhance their performance.
+In our project to predict whether a client will subscribe to a term deposit, we explored several machine-learning approaches to find the most effective model. Below, we outline the different models we tried and the techniques we used to enhance their performance.
 
 ## Logistic Regression
 Our first approach was to implement a Logistic Regression model.
@@ -52,7 +52,7 @@ Our next approach was to use a Random Forest model.
 **Evaluation**: With very similar results to the Logistic Regression model, we decided to use Neural Network to try and find a different result. <br>
 
 ## Neural Network
-Given the  results from Random Forest and Logistic Regression, we decided to explore Neural Networks for potentially better outcomes. 
+Given the results from Random Forest and Logistic Regression, we decided to explore Neural Networks for potentially better outcomes. 
 
 **Implementation**: We used the **Keras** library with a TensorFlow backend to build and train our Neural Network models. <br>
 **Results**: The model gave us different results compared to the previous models: 
@@ -85,7 +85,7 @@ We tested several activation functions to determine which worked best for our mo
 * **Softmax**: Used in the output layer for multi-class classification problems to convert raw scores into probabilities, ensuring that the sum of the probabilities is 1.
 
 ## SMOTE / Synthetic Minority Over-sampling Technique ([Documentation](https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html))
-At this point in optimization, we took a look at the class imbalance in our dataset, we applied SMOTE. This technique generates synthetic samples for the minority class, thereby balancing the dataset and improving the model's ability to learn from the minority class
+At this point in the optimization stages, we took a look at the class imbalance in our dataset, we applied SMOTE. This technique generates synthetic samples for the minority class, thereby balancing the dataset and improving the model's ability to learn from the minority class
 
 ## Early Stopping Callback ([Documentation](https://keras.io/api/callbacks/early_stopping/))
 To prevent overfitting and ensure the model generalizes well to unseen data, we implemented the Early Stopping callback:
@@ -94,7 +94,7 @@ To prevent overfitting and ensure the model generalizes well to unseen data, we 
 * **Monitoring**: We monitored the validation loss and stopped training once it ceased to decrease, thus preventing the model from overfitting to the training data.
 
 # Optimization Results:
-As we applied all these different optimizations we saw a variety of results and changes, so we created a chart to track every single test. This let us quickly record the results of each trial, then quickly change and run the model again to be as efficient as possible.
+As we applied all these different optimizations we saw a variety of results and changes, so we created a chart to track every single test. This lets us quickly record the results of each trial, then quickly change and run the model again to be as efficient as possible.
 
 Below is a table with all of the optimizations and the results of each change:
 | Trial # |  Testing Data   |  Testing Data   |   Training Data |   Training Data | Layers  | Neurons | Function | Epochs | SMOTE      | Early Stop |
