@@ -17,6 +17,25 @@ The Bank Marketing Dataset is derived from direct marketing campaigns (via phone
 
 We decided on using the **bank-full.csv**, as it contained the full dataset with fewer unnecessary features, saving us from having to drop those later on.
 
+## Variable Information
+- **age** (numeric)
+- **job** : type of job (categorical: "admin.","unknown","unemployed","management","housemaid","entrepreneur","student","blue-collar","self-employed","retired","technician","services")
+- **marital** : marital status (categorical: "married","divorced","single"; note: "divorced" means divorced or widowed)
+- **education** (categorical: "unknown","secondary","primary","tertiary")
+- **default**: has credit in default? (binary: "yes","no")
+- **balance**: average yearly balance, in euros (numeric) 
+- **housing**: has housing loan? (binary: "yes","no")
+- **loan**: has personal loan? (binary: "yes","no")
+- **contact**: contact communication type (categorical: "unknown","telephone","cellular") 
+- **day**: last contact day of the month (numeric)
+- **month**: last contact month of year (categorical: "jan", "feb", "mar", ..., "nov", "dec")
+- **duration**: last contact duration, in seconds (numeric)
+- **campaign**: number of contacts performed during this campaign and for this client (numeric, includes last contact)
+- **pdays**: number of days that passed by after the client was last contacted from a previous campaign (numeric, -1 means client was not previously contacted)
+- **previous**: number of contacts performed before this campaign and for this client (numeric)
+- **poutcome**: outcome of the previous marketing campaign (categorical: "unknown","other","failure","success")
+- **y** - has the client subscribed a term deposit? (binary: "yes","no")
+  
 ## Classification Goal:
 The main use of this dataset is to predict whether a client will agree to subscribe to a [term deposit](https://www.investopedia.com/terms/t/termdeposit.asp) after being contacted through the bank's marketing campaign.
 
@@ -132,3 +151,10 @@ Below is a table with all of the optimizations and the results of each change:
 |   `12`  | `86.9%`         | `26.5%`         | `88.1%`         | `27.8%`         | Layer 2 | `96`    | relu     |  `100` | `0.5`      | `Stopped at 1` |
 |   `12`  |                 |                 |                 |                 | Layer 3 | `48`    | relu     |  `100` | `0.5`      | `Stopped at 1` |
 |   `12`  |                 |                 |                 |                 | Layer 4 | `1`     | sigmoid  |  `100` | `0.5`      | `Stopped at 1` |
+
+
+# References
+* Data source: https://archive.ics.uci.edu/dataset/222/bank+marketing
+* Early Stop callback: https://www.geeksforgeeks.org/choose-optimal-number-of-epochs-to-train-a-neural-network-in-keras/
+* SMOTE documentation: https://imbalanced-learn.org/stable/references/generated/imblearn.over_sampling.SMOTE.html
+* Grammarly: https://www.grammarly.com
