@@ -1,9 +1,9 @@
 # Predicting Bank Marketing Campaign Success
 ### Project by:
-* [Saudia Epps]()
+* [Saudia Epps](https://github.com/smepps1989)
 * [Clayton Knight](https://github.com/claytonmknight)
 * [Erik Malrait](https://github.com/virtule)
-* [Jacqueline Meyer]()
+* [Jacqueline Meyer](https://github.com/JacqueLeeMeyer)
 
 
 # Introduction to the Dataset:
